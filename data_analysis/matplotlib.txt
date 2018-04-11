@@ -1,0 +1,20 @@
+1. python matplotlib使用基本步骤：
+
+引包：import matplotlib.pyplot as plt；
+创建画布：fig = plt.figure()；
+添加分区：ax = fig.add_subplot(311)  #三个数字分别代表行、列及本图所处位置；
+ax..axis([-5,5,0,1])  #设置x轴最小、最大值，y轴最小、最大值；
+ax.scatter(xcord1,ycord1, s=30, c='red', marker='s')  #用于画散点图；
+ax.plot(x, y)  #用于画线图；
+plt.title(“this is a title”)  #图形添加标题；
+plt.xlabel('x')、plt.ylabel('y')  #分别对坐标轴添加标题
+plt.show()  #显示图形；
+
+2. Python matplotlib 画图窗口显示到gui或者控制台的方法
+%matplotlib inline
+
+然后在控制台里画图就可以显示在控制台里
+
+#备选参数: ['auto', 'gtk', 'gtk3', 'inline', 'nbagg', 'notebook', 'osx', 'qt', 'qt4', 'qt5', 'tk', 'wx']
+
+然后画图就可以显示在GUI里
