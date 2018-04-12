@@ -1,0 +1,36 @@
+10 Minutes to pandas - http://pandas.pydata.org/pandas-docs/stable/10min.html
+
+1. 引入约定：
+    import numpy as np
+    import pandas as pd
+    from pandas import Series, DataFrame
+    import matplotlib.pyplot as plt
+
+2. Series - 传入一个list - 可视作是一个定长的有序字典；
+
+3. DataFrame - pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)
+       data传入一个numpy的array或字典（可被转换为series-like),
+       index默认为np.arange(n),
+       columns默认为np.arange(n);  
+       既有行索引也有列索引，可视作Series组成的字典；
+
+4. 方法 & 属性：
+    数据查看
+        head(), tail()
+        index, columns, values
+        describe() - numeric类型列的数据统计信息；
+        T - Transpose
+        sort_index(axis= , ascending=True/False), sort_values(by='列名')
+    数据选择
+        选择单列，对行切片
+        ——e.g. data[['tip', 'size']] == data.loc[:, ['tip', 'size']]
+        Selection by Label: loc[...]
+        Selection by Position, Boolean Indexing
+        数据设置
+    Missing Data
+    Operations
+
+5. Getting Data In/Out：
+    CSV：to_csv('filename'), read_csv('filename');
+    HDF5
+    Excel:to_excel('filename', 'sheetname'), read_excel('filename', 'sheetname');
