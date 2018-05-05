@@ -38,7 +38,7 @@ def loadDataSet(fileName):
 def standRegres(xArr, yArr):
     '''
 
-        标准回归训练, 返回回归系数的向量
+        标准回归训练, 返回回归系数ws的向量
 
     '''
     xMat = np.mat(xArr)
@@ -72,15 +72,16 @@ def dataPlot(xArr, yArr):
     ax = fig.add_subplot(111)
     xMat = np.mat(xArr)
     yMat = np.mat(yArr)
-
+    
+    # choose the 2nd column of X which is x1, and 1st column of y
     ax.scatter(xMat[:, 1].flatten().A[0], yMat.T[:, 0].flatten().A[0])
 
 def main():
     data_file = 'L08-Regression/ex0.txt'
     xArr, yArr = loadDataSet(data_file)
-    ws = standRegres(xArr, yArr)
+    # ws = standRegres(xArr, yArr)
 
-    yHat = yPrediction(xArr, ws)
+    # yHat = yPrediction(xArr, ws)
     dataPlot(xArr, yArr)
 
 if __name__ == '__main__':
