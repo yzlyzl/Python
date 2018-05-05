@@ -3,11 +3,16 @@
     skew(), kurt(),
     相关性：cov() - 协方差矩阵, corr() - Pearson相关系数矩阵;
 
+
 2. Plotting：
-    pandas.DataFrame.plot:
-      ——kind参数确定做图类型（'line', 'hist', 'box',……）
+    pandas.DataFrame.plot():
+      ——kind参数确定做图类型（'line', 'hist', 'box',……），
+        subplots（=False）为每一列单独制作一张子图，
+        figsize=(width, height)；
+
       boxplot(return_type=None) - return_type : {None, ‘axes’, ‘dict’, ‘both’}, 'axes' returns the matplotlib axes;
       .plot.line() - 线图, .plot.hist() - 直方图
+
 
 3. set_index() - set the DataFrame index using one or more existing columns
                - Yield a new object

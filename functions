@@ -1,8 +1,12 @@
+http://www.runoob.com/python3/ - 作为一个python的中文手册查询一下还是不错的
+pydoc和help()更方便一些
+
 1. 内置函数：
-  zip() - http://www.runoob.com/python/python-func-zip.html
-      1）zip()函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表;
-      2）如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同;
-      3）利用 * 号操作符，可以将元组解压为列表;
+  1)zip() - http://www.runoob.com/python/python-func-zip.html
+      i）zip()函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表;
+      ii）如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同;
+      iii）利用 * 号操作符，可以将元组解压为列表;
+  2)strip([chars]) - 移除字符串头尾的指定字符（默认为空格）；
     
 2. 内置库：
   1）json:
@@ -10,4 +14,4 @@
       
 3. File：
   readline() - fileObject.readline() - 从文件读取整行，包括'\n'；
-  readlines() - 读取文件所有行直到EOF；
+  readlines() - 读取文件所有行直到EOF，并返回list，可用for…in处理；

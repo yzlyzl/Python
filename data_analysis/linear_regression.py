@@ -19,7 +19,9 @@ def loadDataSet(fileName):
         从文件中加载数据
 
     '''
-    numFeat = len(open(fileName).readline().split('\t')) - 1    # the number of Fields
+    # the number of Fields
+    # notice that the 1st & 2nd columns stand for x0 and x1, and the last column stands for y
+    numFeat = len(open(fileName).readline().split('\t')) - 1    
     dataArr = []
     labelArr = []
     fr = open(fileName)
@@ -42,6 +44,7 @@ def standRegres(xArr, yArr):
     xMat = np.mat(xArr)
     yMat = np.mat(yArr).T    # yArr is a row vector
     xTx = xMat.T * xMat    # the matrix of (X^T * X)
+    # to calculate the determinant of xTx
     if np.linalg.det(xTx) == 0.0:
         print ('This matrix is singular, cannot do inverse')
         return
@@ -51,7 +54,7 @@ def standRegres(xArr, yArr):
 def yPrediction(xArr, ws):
     '''
 
-        根据计算得到的回归系数ws，来预测y
+        根据计算得到的回归系数ws，来预测y，返回预测向量yHat
 
     '''
     xMat = np.mat(xArr)
