@@ -229,7 +229,7 @@ def regularize(xMat):
 def stageWise(xArr, yArr, eps=0.01, numIt=100):
     '''
 
-        前向逐步线性回归
+        前向逐步线性回归，返回一个ndarray
 
         eps：每次迭代需要调整的步长
         numIt：迭代次数
