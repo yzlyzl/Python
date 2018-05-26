@@ -85,6 +85,9 @@ def dataPlot(xArr, yArr):
     
     # choose the 2nd column of X which is x1, and 1st column of y
     ax.scatter(xMat[:, 1].flatten().A[0], yMat.T[:, 0].flatten().A[0])
+    # 对于ipython notebook可以直接用%matplotlib inline自动显示图片
+    # 命令行中需要使用该条命令
+    plt.show()    
 
 
 ##################################
